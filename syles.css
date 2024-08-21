@@ -24,8 +24,9 @@ html {
 }
 
 section {
+    padding-top: 80px;
     scroll-snap-align: start;
-    
+
 }
 
 .navbar {

@@ -20,11 +20,11 @@
 
 html {
     scroll-snap-type: y mandatory;
-    
+    scroll-behavior: smooth;
+    scroll-padding: 80px;
 }
 
 section {
-    padding-top: 80px;
     scroll-snap-align: start;
 
 }
@@ -224,6 +224,47 @@ section {
 
     }
 
+}
+/* Nav indicator Section CSS */
+
+nav.indicators{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 50%;
+	height: 20px;
+  margin-top:-10px;
+	text-align: center;
+}
+
+nav.indicators ul{
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+nav.indicators ul li.current{
+	background-color: #ffffff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	-webkit-transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
+   -moz-transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
+     -o-transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
+        transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995); /* custom */
+
+-webkit-transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
+   -moz-transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
+     -o-transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
+        transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995); /* custom */
+}
+nav.indicators ul li{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	margin: 0 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
 }
 
 /*Hero Section CSS*/
@@ -473,21 +514,28 @@ section {
         display: flex;
         flex-direction: column;
         height: 90vh;
-        
     }
 
+    .about-me-content {
+        margin: 0;
+    }
     .about-me h2 {
         font-size: 2rem;
-        margin-top: 1rem;
+        margin-top: 5rem;
     }
     .about-me p {
-        font-size: 4px;
+        font-size: 1rem;
+        display: flex;
     }
 }
 
 @media screen and (max-width: 480px){
     .about-me-container {
-        padding: 4rem;
+        padding-top: 1rem;
+    }
+    .about-me h2 {
+        font-size: 2rem;
+        margin-top: 1rem;
     }
     
 
@@ -562,7 +610,7 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 2rem;
+        margin-top: 0rem;
     }
 
     .services h1 {

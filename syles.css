@@ -10,24 +10,16 @@
 }
 
 * {
+    
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Circular', sans-serif;
-    
+
 
 }
 
-html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    scroll-padding: 80px;
-}
 
-section {
-    scroll-snap-align: start;
-
-}
 
 .navbar {
     background: #fa8603;
@@ -142,19 +134,19 @@ section {
         position: absolute;
         top: -1000px;
         opacity: 0;
-        transition: all 0.5s ease;
-        height: 50vh;
+        transition: opacity 0.5s ease;
+        height: 90vh;
         z-index: -1;
         background-color: #987284;
     }
 
     .navbar__menu.active {
-        background: #131313;
+        background: #fa8603;
         top: 100%;
         opacity: 1;
-        transition: all 0.5s ease;
+        transition: opacity 0.5s ease;
         z-index: 99;
-        height: 50vh;
+        height: 90vh;
         font-size: 1.6rem;
 
     }
@@ -225,61 +217,25 @@ section {
     }
 
 }
-/* Nav indicator Section CSS */
 
-nav.indicators{
-	position: absolute;
-	left: 0;
-	width: 100%;
-	top: 50%;
-	height: 20px;
-  margin-top:-10px;
-	text-align: center;
-}
-
-nav.indicators ul{
-	display: inline-block;
-	text-align: center;
-	position: relative;
-}
-nav.indicators ul li.current{
-	background-color: #ffffff;
-	position: absolute;
-	left: 0;
-	top: 0;
-	-webkit-transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
-   -moz-transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
-     -o-transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995);
-        transition: all 400ms cubic-bezier(1.000, 0.005, 0.080, 0.995); /* custom */
-
--webkit-transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
-   -moz-transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
-     -o-transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995);
-        transition-timing-function: cubic-bezier(1.000, 0.005, 0.080, 0.995); /* custom */
-}
-nav.indicators ul li{
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	border-radius: 10px;
-	margin: 0 10px;
-	background-color: rgba(255, 255, 255, 0.5);
-	cursor: pointer;
-}
 
 /*Hero Section CSS*/
 .main {
+    
     background-color: #fa8603;
+
 }
 .main__container {
+    scroll-snap-align: start;
+
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-self: center;
     margin: 0 auto;
-    height: 90vh;
-    background-color: #fa8603;
+    height: 95vh;
+    
     z-index: 1;
     width: 100%;
     max-width: 1300px;
@@ -461,7 +417,10 @@ nav.indicators ul li{
 
 
 .about-me {
+    height: 95vh;
     background-color: #Fae3cf;
+    scroll-snap-align: start;
+
 }
 .about-me-container {
     display: grid;
@@ -543,7 +502,11 @@ nav.indicators ul li{
 /*Services Section CSS */
 
 .services {
+    height: 95vh;
+
     background: #0a0e23;
+    scroll-snap-align: start;
+
     
 
 }
@@ -562,7 +525,6 @@ nav.indicators ul li{
 
 
 .services__container button {
-    border: thin 4px white;
     
     margin: 0 auto;
 
@@ -661,8 +623,14 @@ nav.indicators ul li{
 }
 
 /*Footer CSS*/
+.footer {
+    height: 95vh;
+    background-color: #032539;
 
+}
 .footer__container {
+    scroll-snap-align: start;
+
     background-color: #032539;
     padding: 5rem 0;
     display: flex;
